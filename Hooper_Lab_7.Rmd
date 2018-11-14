@@ -21,3 +21,26 @@ Because the light was green
 Nope... chickens didn't exist yet
 
 Blue 
+
+
+
+Creator (Tess)
+
+Getting gc_df.csv data, loading the tidyverse, and getting some summary counts 
+
+```{r}
+
+library(tidyverse)
+gc_df <- read_csv("gc_df.csv")
+
+
+get_guns <- gc_df %>% 
+  filter(gender != "NA", make_get_guns != "NA") %>% 
+  count(gender, make_get_guns) %>%  #Makes a table that groups gender and gun control preference -- as is here, this is not in contingency format (we want one row for male and one row for female)
+  spread(make_get_guns, n) %>% #Spreads out data so variables (male and female) exist in their own columns (rather than separate columns based on gun preference) 
+  select(-gender) #Removes gender column and makes it labeled just "1" and "2"
+
+rownames(get_guns) <- c("Female", "Male") #Renames row names "1" and "2" as Female and Male
+
+```
+
