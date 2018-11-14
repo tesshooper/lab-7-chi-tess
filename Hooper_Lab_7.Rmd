@@ -67,3 +67,20 @@ xxxxxx
 
 
 
+I am the other Collaborator (Karan) and I am also going to do chi-square.
+
+Is the perception of gun control access independent of sex?
+
+```{r}
+
+guns_prop = prop.table(as.matrix(get_guns), 1)
+
+guns_prop
+
+# Perform chi-square
+
+guns_x2 = chisq.test(get_guns)
+guns_x2
+
+```
+
