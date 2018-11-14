@@ -43,4 +43,24 @@ get_guns <- gc_df %>%
 rownames(get_guns) <- c("Female", "Male") #Renames row names "1" and "2" as Female and Male
 
 ```
+I am the Collaborator ( VGuenther2) and I am going to chi_square 
+Is there a significant difference in gun control perspectives ( as related to access to guns)for males and females ?
+
+Is there a significant association between sex and gun control recommendations ?
+
+Chi-Square
+```{r}
+
+guns_prop <- prop.table(as.matrix(get_guns), 1) # only calculate accross rows 
+guns_prop
+
+#Performing chi-square
+guns_x2 <- chisq.test(get_guns)
+guns_x2
+```
+Recommended gvmt action on gun access differs significantly for males and females($\chi^2$(`r guns_x2$parameter`)=......, p <0.001)
+
+
+
+
 
