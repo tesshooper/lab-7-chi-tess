@@ -61,6 +61,9 @@ guns_x2
 Recommended gvmt action on gun access differs significantly for males and females($\chi^2$(`r guns_x2$parameter`)=......, p <0.001)
 
 
+xxxxxx
+
+
 
 
 
