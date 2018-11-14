@@ -15,5 +15,10 @@ Hey it's Tess!
 Hey, it's Tess again --- why did the dinosaur cross the road? 
 
 To escape death ? 
+<<<<<<< HEAD
 Because the light was green 
 
+=======
+
+Nope... chickens didn't exist yet 
+>>>>>>> 74b6e3b793d569785eaea843f1dc4b18b43c5692
